@@ -11,6 +11,7 @@ builder.Logging.AddConsole(o => o.LogToStandardErrorThreshold = LogLevel.Trace);
 
 builder.Services
     .AddMcpServer()
+    .WithHttpTransport() // Add HTTP transport
     .WithToolsFromAssembly()     // reuse our attribute-based tools
     .WithPromptsFromAssembly();
 
